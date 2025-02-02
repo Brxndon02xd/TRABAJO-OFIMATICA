@@ -1,0 +1,168 @@
+/* Reset general de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ECF0F1;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    animation: fadeIn 2.5s ease-out;
+}
+
+/* Animación para la sección Hero */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Servicios */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.services h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #34495E;
+}
+
+.service-item {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item h4 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 30px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer span {
+    color: #e74c3c; /* Rojo para el corazón */
+    font-size: 18px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .services {
+        padding: 20px;
+    }
+}
